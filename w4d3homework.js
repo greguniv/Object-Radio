@@ -15,57 +15,54 @@
 let radio = {
     radioName: 'wsb',
     stations: [{
-        stationName: 'cassa',
+        stationName: 'KISS FM',
         songs: [
             {
-                'artist': 'beyonce',
-                'song': 'Put a ring'
+                'artist': 'Beyonce',
+                'song': 'Ring On It'
             },
             {
-                'artist': 'shakira',
-                'song': 'Whatever'
+                'artist': 'Shakira',
+                'song': 'Wherever, Whenever'
             }],
     },
     {
-        stationName: 'Another',
+        stationName: '98.3',
         songs: [
             {
-                'artist': 'John',
-                'song': 'Put a ring'
+                'artist': 'Bad Bunny',
+                'song': 'Vuelve'
             },
             {
-                'artist': 'shakira',
-                'song': 'Whatever'
+                'artist': 'Lady Gaga',
+                'song': 'Sour Candy'
             }]
     }]
 }
 
-radio.radioName = "example";
-radio.stations[1].songs.push({ artist: 'Mike', song: 'ThreeEra' })
-
-// radio.stations[0].songs[0].artist = 'Juan'
-// console.log(radio);
-console.log(radio.stations[1].songs)
-radio.stations[1].songs.pop()
-console.log(radio.stations[1].songs)
 
 
-console.log(radio.stations[0])
+// console.log(radio.stations[1])
+
+// console.log("Now Playing:" + songs,title + "by" + song.artist)
 
 //classes should be capitalized ALWAYS
 
 class Animal {
     constructor(name, age, color, legs) {
-        this.name = name;
-        this.age = age;
-        this.color = color;
-        this.legs = legs;
+        this.name = name
+        this.age = age
+        this.color = color
+        this.legs = legs
     }
 
     sound() {
         console.log('The sound this animal makes is: Ahhh!')
     }
+
 }
-const mammal = new Animal()
-// console.log(mammal)
-mammal.sound()
+const mammal = new Animal('giraffe', '7', 'yellow', '4')
+const dog = new Animal('Casey', '7', 'tan/white', '4')
+console.log(mammal)
+console.log(dog)
+// mammal.sound()
