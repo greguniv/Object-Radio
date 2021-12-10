@@ -8,45 +8,48 @@
 
 // Create a method on your radio object that changes the station randomly
 
-// When the station is changed, pick a song from that station console.log("Now Playing:" + song,title + "by" + song.artist)
+// When the station is changed, pick a song from that station console.log("Now Playing:" + song.title + "by" + song.artist)
 
 
 
 let radio = {
-    radioName: 'wsb',
     stations: [{
         stationName: 'KISS FM',
         songs: [
             {
-                'artist': 'Beyonce',
-                'song': 'Ring On It'
+                artist: 'Beyonce',
+                title: 'Ring On It'
             },
             {
-                'artist': 'Shakira',
-                'song': 'Wherever, Whenever'
+                artist: 'Shakira',
+                title: 'Wherever, Whenever'
             }],
     },
     {
         stationName: '98.3',
         songs: [
             {
-                'artist': 'Bad Bunny',
-                'song': 'Vuelve'
+                artist: 'Bad Bunny',
+                title: 'Vuelve'
             },
             {
-                'artist': 'Lady Gaga',
-                'song': 'Sour Candy'
+                artist: 'Lady Gaga',
+                title: 'Sour Candy'
             }]
-    }]
+    }],
+    song() {
+        const indexOfStation = Math.floor(Math.random() * radio.stations.length); 
+        const indexOfSong = Math.floor(Math.random() * radio.stations[indexOfStation].songs.length); 
+        return radio.stations[indexOfStation].songs[indexOfSong];
+    } 
 }
 
-
-
-// console.log(radio.stations[1])
-
-// console.log("Now Playing:" + songs,title + "by" + song.artist)
+const song = radio.song()
+console.log("Now Playing: " + song.title + " by " + song.artist)
 
 //classes should be capitalized ALWAYS
+
+
 
 class Animal {
     constructor(name, age, color, legs) {
@@ -59,10 +62,19 @@ class Animal {
     sound() {
         console.log('The sound this animal makes is: Ahhh!')
     }
+    run() {
+        console.log('This animal can probably chase you down.')
+    }
+    bite() {
+        console.log('They won\'t bite.')
+    }
 
 }
-const mammal = new Animal('giraffe', '7', 'yellow', '4')
-const dog = new Animal('Casey', '7', 'tan/white', '4')
-console.log(mammal)
-console.log(dog)
-// mammal.sound()
+// const mammal = new Animal('giraffe', '7', 'yellow', '4')
+// console.log(mammal)
+
+// const dog = new Animal('Casey', '7', 'tan/white', '4')
+// console.log(dog)
+// dog.sound()
+// dog.run()
+// dog.bite()
